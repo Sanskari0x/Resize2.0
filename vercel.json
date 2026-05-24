@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/resizer",
+      "destination": "/api/resizer"
+    },
+    {
+      "source": "/((?!api|static).*)" ,
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/resizer.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}
